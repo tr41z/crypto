@@ -4,23 +4,22 @@
 #include "include/alg/xor.h"
 #include "include/file.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     if (argc != 5) {
         printf("User must provide 4 arguments\n");
-        printf("------------------------\n");
+        printf("--------------------------\n");
         printf("1. Algorithm to be used\n");
         printf("2. File to be encrypted\n");
         printf("3. Output file directory\n");
         printf("4. Key to encrypt file\n");
-        printf("------------------------\n");
+        printf("Type `crypto --h` for more\n");
+        printf("--------------------------\n");
         exit(0);
     }
 
     if (strcmp(argv[1], "xor") == 0) {
         xor_encrypt(argv[2], argv[3], argv[4]);
     }
-
-    printf("Hello Crypto!");
 
 	return 0;
 }

@@ -1,9 +1,7 @@
-#ifndef ENCRYPT_H
-#define ENCRYPT_H
+#ifndef XOR_H
+#define XOR_H
 
-#include <stdio.h>
-
-void xor_encrypt(char* finp, char* fenc, char *key);
-void xor_decrypt(FILE* fenc, FILE* fout, char key);
+void xor_encrypt(char* inputFile, char* encryptedFile, char* key);
+void xor_decrypt(char* encryptedFile, char* outputFile, char* key);
 
 #endif

@@ -5,14 +5,14 @@ DCRY_EXEC = decrypto
 ARGS = -Wall
 
 crypto:
-	$(COMPILER) $(ARGS) crypto.c $(SOURCES) -o $(CRY_EXEC)
+	$(CRY_EXEC).exe xor C:\Users\tr41z\source\repos\crypto\filename.txt C:\Users\tr41z\source\repos\crypto\enc.txt secret
 
 decrypto:
-	$(COMPILER) $(ARGS) decrypto.c $(SOURCES) -o $(DCRY_EXEC)
+	$(DCRY_EXEC).exe xor C:\Users\tr41z\source\repos\crypto\enc.txt C:\Users\tr41z\source\repos\crypto\out.txt secret
 
 all:
 	$(COMPILER) $(ARGS) crypto.c $(SOURCES) -o $(CRY_EXEC)
 	$(COMPILER) $(ARGS) decrypto.c $(SOURCES) -o $(DCRY_EXEC)
 
 clean:
-	del $(CRY_EXEC).exe $(DCRY_EXEC).exe
+	del $(CRY_EXEC).exe $(DCRY_EXEC).exe out.txt enc.txt
