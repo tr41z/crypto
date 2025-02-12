@@ -1,8 +1,18 @@
 COMPILER = gcc
-SOURCES = encrypt.c file.c
-EXEC = crypto
-INPUT = main.c
+SOURCES = alg/xor.c file.c
+CRY_EXEC = crypto
+DCRY_EXEC = decrypto
 ARGS = -Wall
 
-run:
-	$(COMPILER) $(ARGS) $(INPUT) $(SOURCES) -o $(EXEC)
+crypto:
+	$(COMPILER) $(ARGS) crypto.c $(SOURCES) -o $(CRY_EXEC)
+
+decrypto:
+	$(COMPILER) $(ARGS) decrypto.c $(SOURCES) -o $(DCRY_EXEC)
+
+all:
+	$(COMPILER) $(ARGS) crypto.c $(SOURCES) -o $(CRY_EXEC)
+	$(COMPILER) $(ARGS) decrypto.c $(SOURCES) -o $(DCRY_EXEC)
+
+clean:
+	del $(CRY_EXEC).exe $(DCRY_EXEC).exe
