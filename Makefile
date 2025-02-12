@@ -1,5 +1,5 @@
 COMPILER = gcc
-SOURCES = alg/xor.c file.c
+SOURCES = algo/xor.c file.c
 CRY_EXEC = crypto
 DCRY_EXEC = decrypto
 ARGS = -Wall
