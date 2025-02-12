@@ -8,7 +8,7 @@
 int main() {
 	FILE *finp;
 	FILE *fenc;
-	//FILE *fout;
+	FILE *fout;
 	char key = 'K';
     char filePath[1024];
     char choice[8];
@@ -49,8 +49,28 @@ int main() {
 
         fclose(finp);
         fclose(fenc);
-    } else {
-        // Decrypt
+    } else if (strcmp(choice, "2") == 0) {
+        printf("Please provide file to decrypt (File Path): ");
+        fgets(filePath, sizeof(filePath), stdin);
+        filePath[strcspn(filePath, "\n")] = '\0';
+
+        fenc = fopen(filePath, "r");
+        if (fenc == NULL) {
+            printf("Error opening encrypted file!");
+            exit(0);
+        }
+
+        fout = fopen("out.txt", "w");
+        if (fout == NULL) {
+            printf("Error opening out file!");
+            exit(0);
+        }
+
+        decrypt(fenc, fout, key);
+        printf("File decrypted successfully! Check out.txt file\n");
+
+        fclose(fenc);
+        fclose(fout);
     }
 
 	return 0;
