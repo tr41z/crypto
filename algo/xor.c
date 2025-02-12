@@ -1,4 +1,4 @@
-#include "../include/alg/xor.h"
+#include "../include/algo/xor.h"
 #include "../include/file.h"
 #include <stdlib.h>
 

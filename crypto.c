@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "include/alg/xor.h"
+#include "include/algo/xor.h"
 #include "include/file.h"
 
 int main(int argc, char* argv[]) {
