@@ -4,7 +4,7 @@
 #include "include/algo/xor.h"
 #include "include/file.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     if (argc != 5) {
         printf("User must provide 4 arguments\n");
         printf("--------------------------\n");

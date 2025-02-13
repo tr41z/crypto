@@ -4,4 +4,4 @@
 void xor_encrypt(char* inputFile, char* encryptedFile, char* key);
 void xor_decrypt(char* encryptedFile, char* outputFile, char* key);
 
-#endif
+#endif /* XOR_H */

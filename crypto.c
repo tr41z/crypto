@@ -3,17 +3,16 @@
 #include <string.h>
 #include "include/algo/xor.h"
 #include "include/file.h"
+#include "include/helpers.h"
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) { 
+    if (strcmp(argv[1], "--h") == 0) {
+        helpMessage();
+        exit(0);
+    }
+
     if (argc != 5) {
-        printf("User must provide 4 arguments\n");
-        printf("--------------------------\n");
-        printf("1. Algorithm to be used\n");
-        printf("2. File to be encrypted\n");
-        printf("3. Output file directory\n");
-        printf("4. Key to encrypt file\n");
-        printf("Type `crypto --h` for more\n");
-        printf("--------------------------\n");
+        argumentMissingMessage();
         exit(0);
     }
 

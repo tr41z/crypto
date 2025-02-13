@@ -6,4 +6,4 @@
 char* preprocess(FILE* file);
 size_t fileSize(FILE* file);
 
-#endif
+#endif /* FILE_H */
