@@ -1,1 +1,7 @@
 *.swp
+*.DS_Store
+*/crypto
+*/decrypto
+*/crypto.*
+*/decrypto.*
+

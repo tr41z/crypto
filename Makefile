@@ -1,7 +1,13 @@
 COMPILER = gcc
-SOURCES = algo\xor.c file.c
-CRY_EXEC = bin\crypto
-DCRY_EXEC = bin\decrypto
+ifeq ($(OS),Windows_NT)
+	SOURCES := algo\xor.c file.c
+	CRY_EXEC := bin\crypto
+	DCRY_EXEC := bin\decrypto
+else
+	SOURCES := algo/xor.c file.c
+	CRY_EXEC := bin/crypto
+	DCRY_EXEC := bin/decrypto
+endif
 ARGS = -Wall
 DOCS_DIR = docs
 
